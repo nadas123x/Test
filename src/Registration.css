@@ -1,0 +1,81 @@
+.register-container
+{
+   
+   display: flex;
+   color:aliceblue;
+   height: 78vh;
+   justify-content: center;
+   align-items: center;
+
+}
+.body{
+  color: aliceblue;
+}
+.register-form
+{
+  display: flex;
+  flex-direction: column;
+  min-width: 10vw;
+
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    text-align: center;
+    margin:0; 
+    
+}
+.contactez h6{
+  text-transform: uppercase;
+  margin:0; 
+	font-size: 25px;
+  line-height: 1.8em;
+	font-weight: 800;
+  text-align: center;
+  color: #ffffff;  
+}
+
+input {
+
+    padding-top: 0.1rem;
+    padding-bottom: 0.9rem;
+    padding-right: 0.9rem;
+    margin: 0.5rem;
+    margin: bottom 1px;
+    border-radius: 3%;
+    width: 90%;
+}
+.msg input{
+  padding-top: 1.9rem;
+  padding-bottom: 0.9rem;
+  padding-right: 0.9rem;
+ 
+}
+.contactez button
+{
+margin: 5%; 
+ padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #d9d4e7;
+  
+  background-color: #d9d4e7;
+  animation-duration: 5s;
+  width: 210px;
+  height: 55px;
+  margin-left: 25%;
+ 
+  background-color: #ffbd59;
+  border: 2.5px solid #0e172c;
+  transition: background-color 2.2s;
+  transition-duration: 3s;
+  transition: 1.5s;
+  justify-content: center;
+text-align:center;
+}
+
+.bottom-link
+{
+    text-decoration: none;
+    color: black;
+}
