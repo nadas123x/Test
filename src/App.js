@@ -1,5 +1,5 @@
-
 import "./App.css";
+
 
 import Student from "./Student";
 import Test from "./Test";
@@ -10,11 +10,17 @@ import { NavBar } from "./components/NavBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Banner } from "./components/Banner";
+
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import { Newsletter } from "./components/Newsletter";
+import  Tous  from "./components/Tous";
+import OffreComponent from "./components/OffreComponent";
+import Search from "./components/Search";
+import Offre1 from "./components/Offre1";
+import TousOffre from "./components/TousOffre";
+
 
 
 
@@ -28,20 +34,26 @@ function App() {
        <div className="App">
      
          <Routes>
+         <Route exact path="/admin" element={<>  <Tous />
+     
+      </>}/>
 
-         <Route exact path="/accueil" element={<>  <NavBar />
+
+
+         <Route exact path="/" element={<>  <NavBar />
          <Banner />
          <Skills />
          <Projects />
          <Contact />
          <Footer /></>}/>
-   
+      
          <Route exact path="/Contact" element={<><NavBar/><Register/></>}/>
    
    
-         <Route  path="/Test" element={<Test />} />
-         
-          
+         <Route  path="/search" element={<> <Search/> </>} />
+
+         <Route  path="/Offre1" element={<> <TousOffre/> </>} />
+
          </Routes>
        </div>
      </Router>
@@ -51,4 +63,3 @@ function App() {
 }
 
 export default App;
-
