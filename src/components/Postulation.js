@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect } from "react";
+import UploadFiles from "../components/upload-files.component";
 
 import { useState } from "react";
-import "../Registration.css";
+import "./Postulation.css";
 import TrackVisibility from 'react-on-screen';
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/nn.png";
@@ -11,15 +12,18 @@ import 'animate.css';
 import AuthService from "../services/auth.service";
 
 import { useNavigate } from "react-router-dom";
+import { DescriptionOutlined } from "@material-ui/icons";
 
-function Registration()
+function Postulation()
 {
    const [id, setId] = useState("");
-   const [firstname, setFname] = useState("");
-   const [lastname, setLname] = useState("");
+   const [firstname, setFirstname] = useState("");
+   const [lastname, setLastname] = useState("");
    const [email, setEmail] = useState("");
    const [phone, setPhone] = useState("");
-   const [message, setMessage] = useState("");
+   const [description, setDescription] = useState("");
+   const [datedenaissance, setDatedenaissance] = useState("");
+
    const navigate = useNavigate();
    const [loopNum, setLoopNum] = useState(0);
    const [isDeleting, setIsDeleting] = useState(false);
@@ -70,23 +74,25 @@ function Registration()
         event.preventDefault();
     try
         {
-         await axios.post("http://localhost:8080/save" , 
+         await axios.post("http://localhost:8080/savepostuls" , 
 
         {
         id: id,
-        fname: firstname,
-        lname : lastname,
+        firstname: firstname,
+        lastname : lastname,
         email : email,
         phone : phone,
-        message :message 
+        description : description,
+        datedenaissance: datedenaissance,
         });
           alert("User Registation Successfully");
           setId("");
-          setFname("");
-          setLname("");
+          setFirstname("");
+          setLastname("");
           setEmail("");
           setPhone("");
-          setMessage("");
+          setDescription("");
+          setDatedenaissance("");
           navigate("/");
 
         }
@@ -96,58 +102,80 @@ function Registration()
         }
    }
     return (
-        <section className="banner" id="home">
-
-        <div className="register-container">
-  <Col xs={49} md={19} xl={5} >
-    <br></br>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
-            </Col>
-            <form className="register-form" onSubmit={handleSubmit}> 
+        <section className="bannerr" id="home">
+<div className="cardd">
+<br></br>   
+<br></br>   
+<br></br>        <div className="registerr">
+ 
+            <form className="registerr-form" onSubmit={handleSubmit}> 
             <br></br>    
             
-            <div className="contactez">
+            <div className="postulez">
 
-            <h6 class="tagline">
+            <h6 class="tit">
 
-Osez nous contacter sans plus attendre !</h6>
+Informations Personnelles:</h6>
             </div>
         
+            <br></br>  
+            <div className="">
            
 
-           
-
-            <input type="text" 
+     <h1 className="nom"> Votre nom:</h1>      <input type="text" 
             name="firstname" 
             placeholder=" &nbsp;
             Prénom &nbsp;
             " 
             onChange={(event) =>
                 {
-                    setFname(event.target.value);       
+                    setFirstname(event.target.value);       
                 }}
             />
 <br></br>
 
-            <input type="text" 
+   
+<h1 className="nom"> Votre prénom:</h1>          <input type="text" 
             name="lastname"
             placeholder="&nbsp;
             Nom &nbsp;
             "
             onChange={(event) =>
                 {
-                    setLname(event.target.value);       
+                    setLastname(event.target.value);       
                 }}           
             />
 <br></br>
 
+
+
+<h1 className="nom"> Votre Prénom:</h1> <input type="text" 
+            name="lastname"
+            placeholder="&nbsp;
+            Nom &nbsp;
+            "
+            onChange={(event) =>
+                {
+                    setLastname(event.target.value);       
+                }}           
+            />
+<br></br>
+
+
+<h1 className="nom"> Votre nom:</h1> <input type="text" 
+            name="lastname"
+            placeholder="&nbsp;
+            Nom &nbsp;
+            "
+            onChange={(event) =>
+                {
+                    setLastname(event.target.value);       
+                }}           
+            />
+<br></br>
              
-            <input type="text" 
+      
+     <h1 className="nom"> Votre nom:</h1>       <input type="text" 
             name="email" 
             placeholder="&nbsp;
             Email&nbsp;
@@ -160,7 +188,8 @@ Osez nous contacter sans plus attendre !</h6>
          <br></br>
    
 
-        <input type="text" 
+     
+         <h1 className="nom"> Votre nom:</h1>    <input type="text" 
             name="phone" 
             placeholder="&nbsp;
             Numéro de téléphone &nbsp;
@@ -173,18 +202,33 @@ Osez nous contacter sans plus attendre !</h6>
 <br></br>
 <div className="msg">
 
-    <input type="text" 
-            name="message" 
+   
+<h1 className="nom"> Votre nom:</h1>  <input type="text" 
+            name="description" 
             placeholder="&nbsp;
-            Message &nbsp;
+            description &nbsp;
             "
             onChange={(event) =>
                 {
-                    setMessage(event.target.value);       
+                    setDescription(event.target.value);       
+                }}           
+            />
+       
+     <h1 className="nom"> Votre nom:</h1>       <input type="text" 
+            name="datedenaissance" 
+            placeholder="&nbsp;
+            datedenaissance &nbsp;
+            "
+            onChange={(event) =>
+                {
+                    setDatedenaissance(event.target.value);       
                 }}           
             />
             </div>
-            <div className="contactez">
+         
+     <h1 className="nom"> Votre nom:</h1>    <UploadFiles/> 
+            </div>
+            <div className="postulez">
 
             <button type="submit" >Envoyer</button>
 
@@ -193,8 +237,9 @@ Osez nous contacter sans plus attendre !</h6>
 
    
         </div>
+        </div>
         </section>
     )
 }
 
-export default Registration;
+export default Postulation;

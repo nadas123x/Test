@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/OCP_Group.svg.png';
+import logo from '../assets/img/ocp.png';
 import navIcon1 from '../assets/img/tel.png';
 import { Link, useHistory } from 'react-router-dom';
 

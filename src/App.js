@@ -1,65 +1,66 @@
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import UploadFiles from "./components/upload-files.component";
 
-
-import Student from "./Student";
-import Test from "./Test";
-import Register from "./components/Registration";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
+import AuthService from "./services/auth.service";
+import TousOffre from "./components/TousOffre";
+import Tous from "./components/Tous";
 import { NavBar } from "./components/NavBar";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Login from "./components/Login";
 import { Banner } from "./components/Banner";
 
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import  Tous  from "./components/Tous";
-import OffreComponent from "./components/OffreComponent";
-import Search from "./components/Search";
-import Offre1 from "./components/Offre1";
-import TousOffre from "./components/TousOffre";
+import Register from "./components/Register";
+import Home from "./components/Home";
+import Profile from "./components/Profile";
+import BoardUser from "./components/BoardUser";
+import BoardModerator from "./components/BoardModerator";
+import BoardAdmin from "./components/BoardAdmin";
+import Registration from "./components/Registration";
+import Navbarregister from "./components/Navbarregister";
+import Postulation from "./components/Postulation";
 
+const App = () => {
+  
 
-
-
-
-function App() {
   return (
-    
-    <div className="App">
-     <Router>
-       
-       <div className="App">
-     
-         <Routes>
-         <Route exact path="/admin" element={<>  <Tous />
-     
-      </>}/>
+    <Router>
+      
 
-
-
-         <Route exact path="/" element={<>  <NavBar />
+        <div className="App">
+          <Routes>
+            
+         <Route exact path="/acceuil" element={<>  <NavBar />
          <Banner />
          <Skills />
          <Projects />
          <Contact />
          <Footer /></>}/>
-      
-         <Route exact path="/Contact" element={<><NavBar/><Register/></>}/>
-   
-   
-         <Route  path="/search" element={<> <Search/> </>} />
+            <Route exact path= "/home" element={<> <Navbarregister/>  <Home/> </>} />
+            <Route exact path="/login" element={<><Navbarregister/>  <Login/> </>} />
+            <Route exact path="/register" element={<> <Navbarregister/>  <Register/> </>} />
+            <Route exact path="/profile" element={<> <Navbarregister/> <Profile/> </>} />
+            <Route path="/user" element={<><Navbarregister/> <BoardUser/> </>}/>
+            <Route path="/mod" element={<> <Navbarregister/> <BoardModerator/> </>}/>
+            <Route path="/admin" element={<><Navbarregister/>  <BoardAdmin/> </>}/>
+            <Route  path="/Contact" element={<>   <NavBar/> <Registration/></>} />
+            <Route  path="/offre1" element={<> <TousOffre/> </>} />
 
-         <Route  path="/Offre1" element={<> <TousOffre/> </>} />
+            <Route  path="/offre" element={<> <Tous/> </>} />
+            <Route  path="/files" element={<> <UploadFiles/> </>} />
+            <Route  path="/postul" element={<> <Navbarregister/> <Postulation/> </>} />
 
-         </Routes>
-       </div>
-     </Router>
-    </div>
-   
+
+
+          </Routes>
+        </div>
+    </Router>
   );
-}
+};
 
 export default App;

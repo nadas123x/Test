@@ -2,12 +2,14 @@ import { PlusIcon, MinusIcon, XIcon, ExclamationIcon, TrashIcon } from '@heroico
 import { useState } from 'react';
 import Card from 'react-bootstrap/Card'
 import {Button} from 'react-bootstrap'
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory ,Link } from 'react-router-dom';
 import useDeleteOffre from '../hooks/useDeleteOffre';
 import useUpdateOffre from '../hooks/useUpdateOffre';
 import { Navigate } from "react-router-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import './Offre1.css';
+
 
 
 
@@ -27,74 +29,96 @@ export default function Offre1({ direction }) {
     };
     let navigate = useNavigate();
 
-    function handleNav(id){
-
-        if (direction.id==1) {
-            console.log('Le lien a été cliqué.' + direction.id);
-            navigate("../Offre1", { replace: true });
-
-  
-
-        }
-
-         if (direction.id==2) {
-            navigate("../", { replace: true });
-        }
     
-
-    }
-       
         
    
     return (
 
-        <div className="bo">
-            <div
-                className="p-1"
-            >
+            <div className="checkout">
+      <div className="checkout__left">
+        <img
+          className="checkout__ad"
+          src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
+          alt=""
+        />
 
-                
+        <div>
+            
+          <h3>Catégorie: {direction.categorie}</h3>
+
+
+<div className="checkout">
+      <div className="checkoutleft">
+       
+
+        <div>
+          <h2 className="checkout__title"> {direction.name} </h2>
+
+                  
+<div className="checkoutProduct">
+      <img className="checkoutProduct__image" src={direction.imageback}/>
+      <div className="checkoutProduct__info">
+        <p className="checkoutProduct__title">{direction.description}</p>
+        <p className="checkoutProduct__price">
+          <small><strong>   <p className="checkoutProduct__price">{direction.datepub} 🕐 </p></strong></small>
+          
+        </p>
+        <div className="checkoutProduct__rating">
+          {Array()
+            .fill()
+            .map((_, i) => (
+              <p key={i}>🌟</p>
+            ))}
+        </div>
+     
+      </div>
+    </div>
+        </div>
+      </div>
+      </div>
+
+      <div className="checkoutright">
+      </div>
+    </div>
+
+
+
+      
+  
+      
+    <Link to="/connect"  className="subtotal">
+      <button >Postulez maintenant   </button>
+      </Link>
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
                
-                 <div className=''>
+                
 
-                 <Card border="dark" style={{ width: '18rem' }}>
-                 <Card.Body>
-                 <Card.Title style={{ color: 'black' }}>                {direction.name}
-</Card.Title>
-<br></br>
-
-               <NavLink to="/infos">  <Card.Img variant="top" src={direction.imageback}/>
-               </NavLink>
-               <br></br>
-               <br></br>
-         
-                 <Card.Text style={{ color: 'black' }} > &nbsp; &nbsp; &nbsp;   {direction.description}</Card.Text>
-             
-              
-               <Card.Subtitle style={{ color: 'black' }} >{direction.datepub}.</Card.Subtitle>
-               <br></br>
-               <Card.Title style={{ color: 'black' }} >Catégorie: {direction.categorie}</Card.Title>
-               <Button class="btn btn-success" onClick={() => handleNav(direction.id)}> Consulter 
-               </Button>
-
-
-
-                </Card.Body>
-               </Card>
-                </div>
             </div>
             
-            <div className="border-t flex flex-row">
+            <div className="">
               
             </div>
             {showDetail === direction.id ? (
-                <div className="absolute top-0 left-0 rounded-lg w-full h-full backdrop-blur-md flex flex-col justify-center items-center">
-                    <button className="absolute top-1 right-1" onClick={() => setShowDetail(null)}>
-                        <XIcon className="h-5 w-5" />
+                <div className="">
+                    <button className="" onClick={() => setShowDetail(null)}>
+                        <XIcon className="" />
                     </button>
-                    <span className="font-bold mb-4">Quantity: {direction.quantity}</span>
+                    <span className="">Quantity: {direction.quantity}</span>
                   
-                    <div className="w-full border-t">
+                    <div className="">
                     
                     </div>
                 </div>
