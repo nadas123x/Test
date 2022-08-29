@@ -1,8 +1,15 @@
 import React from 'react'
-import {  Link } from "react-router-dom";
 import AuthService from "../services/auth.service";
 import { useState, useEffect } from "react";
 import './Login.css';
+
+import { Navbar, Nav, Container } from "react-bootstrap";
+import navIcon1 from '../assets/img/tel.png';
+import { Link, useHistory } from 'react-router-dom';
+
+import navIcon2 from '../assets/img/59439.png';
+import navIcon3 from '../assets/img/ins.png';
+
 
 
 function Navbarregister() {
@@ -33,8 +40,8 @@ function Navbarregister() {
     <div className="navbar-nav mr-auto">
       <li className="nav-item">
         
-        <Link to={"/home"} className="nav-link">
-          Home
+        <Link to={"/"} className="ms-auto">
+          Accueil
         </Link>
       </li>
 
@@ -56,8 +63,8 @@ function Navbarregister() {
 
       {currentUser && (
         <li className="nav-item">
-          <Link to={"/user"} className="nav-link">
-            User
+          <Link to={"/profill"} className="nav-link">
+          Mon Profil
           </Link>
         </li>
       )}
@@ -79,17 +86,21 @@ function Navbarregister() {
     ) : (
       <div className="navbar-nav ml-auto">
         <li className="nav-item">
-          <Link to={"/login"} className="nav-link">
-            Login
+          <Link to={"/loginn"} className="nav-link">
+            Connectez-vous
           </Link>
         </li>
 
         <li className="nav-item">
           <Link to={"/register"} className="nav-link">
-            Sign Up
+           S'inscrire
           </Link>
         </li>
+       
+      
+
       </div>
+      
     )}
   </nav>
 )

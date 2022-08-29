@@ -1,0 +1,17 @@
+.boite {
+   font-size: 18px;
+    margin-right: 15%;
+    margin-top: -1%;
+    margin-left: 1%;
+    
+ display: inline-flex;
+}
+.boite hr{
+    border-top: 2px solid rgb(81, 83, 90);
+}
+.btnmsg{
+    background-color: rgb(41, 39, 39) !important;
+}
+.css-1108co-MuiButtonBase-root-MuiListItemButton-root.Mui-selected {
+  color: rgb(23, 24, 27) !important;
+}

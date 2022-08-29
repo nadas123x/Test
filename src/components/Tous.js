@@ -20,7 +20,6 @@ function Tous() {
         
         <>
                 
-                <NavBar />
         <body className='N'>
             <div className="">
                 <h1 className="font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-b from-purple-200 to-cyan-300 drop-shadow-lg">
@@ -62,7 +61,7 @@ function Tous() {
 <br></br>
 <br></br>
 
-<h3> &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp;                   Emplois Management, direction générale Maroc : </h3>
+<h3 className='waa'> &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;      &nbsp;                   Emplois Management, direction générale Maroc : </h3>
 
                 <div className="bloq">
                     {data &&

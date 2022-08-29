@@ -19,12 +19,14 @@ p.Card.Text{
     margin:19px;
     margin-top: 80px;
     margin-left: 6%;
-    background-color: rgb(223, 224, 224);
     
 }
-
+.waa{
+  color: black
+  ;
+}
 body.N {
-	background: linear-gradient(-45deg, #90a194, #90a194, #cccccc, #1e1f1e);
+  background-image: linear-gradient(306deg, #c8c1c8, #c9c8c6, #f0f3ec, #cbd5c2);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
 }
@@ -84,4 +86,14 @@ border-radius: 10%;
 .h{
   float:left 
 }
+.card{
+  background-color: white !important;
+  border-radius: 7%;
+}
+.pourtoi{
+  display:inline-block;
+  margin-left: 8%;
 
+}
+.bxg{
+  background-image: linear-gradient(25deg, #d0d4cc, #8a928a, #bcbbbc, #e8ecf1);}

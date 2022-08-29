@@ -53,16 +53,23 @@ export default function Offre1({ direction }) {
 
         <div>
           <h2 className="checkout__title"> {direction.name} </h2>
-
+<hr className='ligne1'></hr>
                   
 <div className="checkoutProduct">
       <img className="checkoutProduct__image" src={direction.imageback}/>
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{direction.description}</p>
+        <br></br>
+        
         <p className="checkoutProduct__price">
-          <small><strong>   <p className="checkoutProduct__price">{direction.datepub} 🕐 </p></strong></small>
           
+          <small><strong>   <p className="checkoutProduct__price">{direction.datepub} 🕐 </p></strong></small>
+          <br></br>
+          <small><strong>   <p className="checkoutProduct__price">{direction.categorie} 🖥️ </p></strong></small>
+
         </p>
+        <hr className='ligne'></hr>
+
         <div className="checkoutProduct__rating">
           {Array()
             .fill()
@@ -84,11 +91,11 @@ export default function Offre1({ direction }) {
 
 
       
-  
-      
-    <Link to="/connect"  className="subtotal">
+    <Link to="/login"  className="subtotal">
       <button >Postulez maintenant   </button>
       </Link>
+      
+    
  
   
 

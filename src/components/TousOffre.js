@@ -10,6 +10,7 @@ import { FaBeer } from 'react-icons/fa';
 
 import TodoApp from './TodoApp';
 import useDataDirection from '../hooks/useDataDirection';
+import Navbarregister from './Navbarregister';
 
 
 
@@ -21,7 +22,7 @@ function TousOffre() {
         
         <>
                 
-                <NavBar />
+                <Navbarregister />
         <body className=''>
        
             

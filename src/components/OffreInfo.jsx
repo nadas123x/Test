@@ -8,12 +8,14 @@ import useUpdateOffre from '../hooks/useUpdateOffre';
 import { Navigate } from "react-router-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 
 
 export default function OffreInfo({ offre }) {
-    const [showDetail, setShowDetail] = useState(null);
+    let { id } = useParams();  
+      const [showDetail, setShowDetail] = useState(null);
     
 
     const updateQuantity = (id, newQuantity) => {
@@ -31,14 +33,14 @@ export default function OffreInfo({ offre }) {
 
         if (offre.id==1) {
             console.log('Le lien a été cliqué.' + offre.id);
-            navigate("../Offre1", { replace: true });
+            navigate("../offre/direction/1", { replace: true });
 
   
 
         }
 
          if (offre.id==2) {
-            navigate("../", { replace: true });
+            navigate("../offre/direction/1", { replace: true });
         }
     
 
@@ -57,7 +59,7 @@ export default function OffreInfo({ offre }) {
                
                  <div className=''>
 
-                 <Card border="dark" style={{ width: '18rem' }}>
+                 <Card color="white" border="dark" style={{ width: '18rem' }}>
                  <Card.Body>
                  <Card.Title style={{ color: 'black' }}>                {offre.name}
 </Card.Title>
@@ -70,7 +72,7 @@ export default function OffreInfo({ offre }) {
          
                  <Card.Text style={{ color: 'black' }} > &nbsp; &nbsp; &nbsp;   {offre.description}</Card.Text>
              
-              
+                 <br></br>
                <Card.Subtitle style={{ color: 'black' }} >{offre.datepub}.</Card.Subtitle>
                <br></br>
                <Card.Title style={{ color: 'black' }} >Catégorie: {offre.categorie}</Card.Title>
@@ -89,7 +91,7 @@ export default function OffreInfo({ offre }) {
             </div>
             {showDetail === offre.id ? (
                 <div className="absolute top-0 left-0 rounded-lg w-full h-full backdrop-blur-md flex flex-col justify-center items-center">
-                    <button className="absolute top-1 right-1" onClick={() => setShowDetail(null)}>
+                    <button className="absolute top-1 right-1" onClick={() => setShowDetail()}>
                         <XIcon className="h-5 w-5" />
                     </button>
                     <span className="font-bold mb-4">Quantity: {offre.quantity}</span>

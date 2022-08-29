@@ -1,0 +1,51 @@
+.carddd{
+
+    margin-top: 0%;
+    margin-left: 44% !important; 
+    font-family: sans-serif;	
+      background-repeat: no-repeat;
+      overflow: hidden;
+      background-size: cover;
+    width: 480px;
+    height: 460px;
+      margin:1% auto;
+      border-radius: 25px;
+      background-color: rgb(109 105 106 / 71%);
+      box-shadow: 0 0 17px rgb(27, 27, 27);
+    padding: 3%;
+    
+  }
+  .btnaddform
+  {
+    margin-left: 45%;
+    margin-top: 10%;
+  }
+  .btnupdate{
+    width: 20px;
+  }
+.btn1{
+
+width: 50%;
+margin-left: 25%;
+background-color: #5b5e5cb2;
+color:aliceblue  }
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    color: #d8d9d9;
+    text-decoration: none;
+    background-color: #d8d9d9;
+    border: 1pxsolidrgba(0,0,0,.125);
+}
+.nadalaplusbelle{
+  font-weight: 500;
+  font-size: 35px;
+  color: rgb(20, 17, 17) !important;
+  letter-spacing: 0.8px;
+  padding: 0 30px;
+  opacity: 1.85;
+}
+.cv{
+  color:black;
+}

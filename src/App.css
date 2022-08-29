@@ -31,8 +31,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #f1f1f1 !important;
-  color: #fff !important;
+  
+  background-image: linear-gradient(25deg, #eff0ef, #e9ecea, #e2e2e2, #ffffff);  color: #fff ;
   font-family: 'Centra', sans-serif !important;
 }
 
@@ -100,13 +100,34 @@ nav.navbar.scrolled {
 nav.navbar a.navbar-brand {
     width: 3%;
 }
+.custom-shape-divider-top-1658871113 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1658871113 svg {
+  position: relative;
+  display: block;
+  width: calc(153% + 1.3px);
+  height: 237px;
+}
+
+.custom-shape-divider-top-1658871113 .shape-fill {
+  fill: #FFFFFF;
+}
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 500;
   color: rgb(20, 17, 17) !important;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   padding: 0 35px;
-  font-size: 18px;
-  opacity: 0.85;
+  font-size: 16px;
+  opacity: 1.85;
+  border-radius: 2px;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -249,7 +270,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, rgba(3, 3, 3, 0.5) -5.91%, rgba(151, 230, 144, 0.5) 111.58%);
   border: 1px solid rgba(206, 206, 206, 0.5);
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 7px;
   display: inline-block;
 }
 .banner h1 {
@@ -549,7 +570,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
   background-image: url('./assets/img/cli.png');
   background-position: center center;
   background-size: cover;

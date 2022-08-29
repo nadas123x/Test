@@ -102,7 +102,7 @@ const Register = (props) => {
 
   return (
     <div className="loginbody">
-      <div className="card">
+      <div className="cardb">
       <img className="imglogin" src={require('../assets/img/ocpcopy.png')} />
       <br></br>
 

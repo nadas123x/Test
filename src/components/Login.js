@@ -50,7 +50,7 @@ const Login = (props) => {
     if (checkBtn.current.context._errors.length === 0) {
       AuthService.login(username, password).then(
         () => {
-          navigate('/profile')        },
+          navigate('/postul')        },
         (error) => {
           const resMessage =
             (error.response &&
@@ -71,7 +71,7 @@ const Login = (props) => {
   return (
     <div className="loginbody">
     <div className="col-md-12">
-      <div className="card">
+      <div className="card2">
       <img className="imglogin" src={require('../assets/img/ocpcopy.png')} />
 
 <br></br>

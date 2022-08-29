@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 
 function Registration()
 {
+  
    const [id, setId] = useState("");
    const [firstname, setFname] = useState("");
    const [lastname, setLname] = useState("");
@@ -70,7 +71,8 @@ function Registration()
         event.preventDefault();
     try
         {
-         await axios.post("http://localhost:8080/save" , 
+         await axios.post("http://localhost:8080/admin/save" , 
+
 
         {
         id: id,

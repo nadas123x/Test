@@ -18,12 +18,15 @@
 
 .checkoutProduct__image {
     object-fit: contain;
-    width: 580px;
-    height: 300px;
+    width: 500px;
+    margin-top: -3%;
+    height: 270px;
     border-radius:   10%;
   }
 .checkoutProduct__price{
   font-size: 16px;
+  color:black;
+
 
 }
 
@@ -33,14 +36,24 @@
 
 .checkoutProduct__title {
     font-size: 16px;
+    color:black;
+    margin-left:  1%;
     line-height: 2em;
     font-weight: 200;
 }
+.ligne{
+  color:black
+}
+.ligne1{
+  color: #111;
+  width:807px;
+  margin-left: 32%;
 
+  }
 .checkout {
     display: flex;
     padding: 20px;
-    background-color: rgb(64 64 64);
+    background-color: #ffffff !important;
     height: max-content;
   }
   
@@ -50,19 +63,21 @@
   }
   
   .checkout__title {
-    margin-left: 5%;
+    margin-left: -10%;
+    color:black;
+
     padding: 10px;
-    border-bottom: 2px solid lightgray;
   }
   .subtotal {
     display: flex;
-    margin-left: 82%;
+    margin-left: 8%;
+    margin-top: -12%;
     flex-direction: column;
     justify-content: space-between;
     width: 200px;
     height: 100px;
     padding: 20px;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     border: 1px solid #1b1a1a;
     border-radius: 5px;
   }
